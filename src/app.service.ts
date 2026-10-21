@@ -16,11 +16,19 @@ export class AppService {
     return 'Hello World!';
   }
 
-  async getMacskak(): Promise<Macska[]> {
+  async getMacskak() {
     const [rows] = await mysqlConnection.execute(
       'SELECT id, suly, szem_szin, gazdi_id, jatek_id FROM macskak',
     );
 
     return rows as Macska[];
+  }
+
+  async getJatek() {
+    const [rows] = await mysqlConnection.execute(
+    'SELECT id, nev FROM jatekok',
+  );
+
+    return rows;
   }
 }
