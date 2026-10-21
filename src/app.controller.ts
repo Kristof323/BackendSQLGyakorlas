@@ -12,4 +12,12 @@ export class AppController {
       title: 'My First NestJS App'
     }
   }
+  @Get('macskak')
+  @Render('macskak')
+  async getMacskak() {
+    return {
+      macskak: await this.appService.getMacskak(),
+    };
+  }
+
 }

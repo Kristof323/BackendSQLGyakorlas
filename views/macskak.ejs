@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macskák</title>
+</head>
+<body>
+    <h1>Macskák</h1>
+    <ul>
+        <% macskak.forEach(macska => { %>
+            <li>ID: <%= macska.id %>, Súly: <%= macska.suly %>, Szem szín: <%= macska.szem_szin %>, Gazdi ID: <%= macska.gazdi_id %>, Játék ID: <%= macska.jatek_id %></li>
+        <% }); %>
+    
+</body>
+</html>
